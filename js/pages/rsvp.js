@@ -38,7 +38,9 @@
       $( "#rsvp-status" ).css({"color":"#101010"});
       $( "#rsvp-status" ).append("Submitting...");
 
-      req = $.post( 'php/rsvp.php', $form.serialize(), function(data, status){
+      var loc = window.location.pathname;
+      var dir = loc.substring(0, loc.lastIndexOf('/'));
+      req = $.post( dir + 'php/rsvp.php', $form.serialize(), function(data, status){
         $( "#rsvp-status" ).css({"color":"#CC181E"});
         $( "#rsvp-status" ).empty();
 
