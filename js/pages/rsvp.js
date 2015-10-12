@@ -6,7 +6,6 @@
   $( "#rsvpForm" ).submit(function( event ) {
     event.preventDefault();
 
-    $( "#rsvp-submit" ).prop("disabled",true);
     $( "#rsvp-status" ).empty();
     $( "#rsvp-status" ).css({"color":"#CC181E"});
 
@@ -38,9 +37,7 @@
       $( "#rsvp-status" ).css({"color":"#101010"});
       $( "#rsvp-status" ).append("Submitting...");
 
-      var loc = window.location.pathname;
-      var dir = loc.substring(0, loc.lastIndexOf('/'));
-      req = $.post( dir + 'php/rsvp.php', $form.serialize(), function(data, status){
+      req = $.post( '/rsvp.php', $form.serialize(), function(data, status){
         $( "#rsvp-status" ).css({"color":"#CC181E"});
         $( "#rsvp-status" ).empty();
 
@@ -61,10 +58,7 @@
         } else {
           alert("Sorry, something went wrong. Please contact Matthew or Fauzia if you are seeing this.\nData: " + data);
         }
-        $( "#rsvp-submit" ).prop("disabled",false);
       });
-} else {
-  $( "#rsvp-submit" ).prop("disabled",false);
 }
 });
 
