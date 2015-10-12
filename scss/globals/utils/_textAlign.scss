@@ -1,0 +1,31 @@
+/*doc
+---
+title: Alignment
+name: Alignment
+category: Utilities - Alignment
+---
+
+From http://styleguide.cfapps.io/layout.html#vertical_align
+
+The Alignment allows you to align horizontally alignment text
+
+```html_example
+<p class="txt-l">.txt-l</p>
+<p class="txt-c">.txt-c</p>
+<p class="txt-r">.txt-r</p>
+```
+
+*/
+
+// horizontal alignment
+.txt-c {
+  text-align: center;
+}
+
+.txt-l {
+  text-align: left;
+}
+
+.txt-r {
+  text-align: right;
+}

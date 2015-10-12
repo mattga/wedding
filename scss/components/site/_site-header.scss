@@ -1,0 +1,36 @@
+.site-header {
+  position: fixed;
+  top:      0;
+  left:     0;
+  right:    0;
+  @include layer(site-header);
+
+  height:     $site-header-height;
+  width:      100%;
+  background: $site-header-bg;
+}
+
+    // Site header panels are the slide-in panels when users click on a trigger buttons (i.e. hamburger, minicart btn).
+
+    // @TODO: Work on smooth scroll later
+    .site-header__panel {
+      position: fixed;
+      top:      0;
+      left:     0;
+
+      height:    100%;
+      width:     100%;
+      max-width: 250px;
+
+      overflow: scroll;
+
+      background: $site-header-panel-bg;
+      @include layer(site-header-panel);
+    }
+
+    .site-header__panel--right {
+      left:  auto;
+      right: 0;
+
+      background: $site-header-panel-bg-alt;
+    }

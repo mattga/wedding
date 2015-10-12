@@ -1,0 +1,149 @@
+// DEFINE KEYFRAMES
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes slideOutFromRight {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes slideOutFromLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+/*
+ * CSS Transitions
+ */
+
+.scene {
+
+}
+
+    .scene-item {
+      animation-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.01, 0.98, 0.265, 0.98);
+      animation-fill-mode: both;
+    }
+
+    .scene-item--slide-in-from-right {
+      animation-name: slideInFromRight;
+    }
+
+    .scene-item--slide-out-from-right {
+      animation-name: slideOutFromRight;
+    }
+
+    .scene-item--slide-in-from-left {
+      animation-name: slideInFromLeft;
+    }
+
+    .scene-item--slide-out-from-left {
+      animation-name: slideOutFromLeft;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

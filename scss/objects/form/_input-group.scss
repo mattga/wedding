@@ -1,0 +1,35 @@
+/*----------------------------*\
+    ~ INPUT GROUP
+\*----------------------------*/
+
+
+/*
+ * Input Group forms unique layouts
+ *
+ */
+
+.input-group--twin {
+
+  @include add-grid(2); /* [1] */
+  @include add-gutter(1/20); /* [1] */
+
+  @include clearfix-me(micro); /* [1] */
+
+  .input-group-wrap:first-child {
+    @include grid-span(1,1); /* [1] */
+  }
+
+  .input-group-wrap:last-child {
+    @include grid-span(1,2); /* [1] */
+  }
+
+
+}
+
+
+/* [class*='col-'] {
+  padding-right: 20px;
+}
+[class*='col-']:last-of-type {
+  padding-right: 0;
+} */

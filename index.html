@@ -2,19 +2,105 @@
 layout: default
 ---
 
-<div class="home">
+<div class="hideVisually js-p-home-overlay"></div>
 
-  <h1>Posts</h1>
-
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div class="navigation">
+  <div class="nav-buttons">
+    <button class="btn btn-default btn-nav js-p-home-details-btn">Details</button>
+    <button class="btn btn-default btn-nav js-p-home-rsvp-btn">RSVP</button>
+    <button class="btn btn-default btn-nav js-p-home-registry-btn">Registry</button>
+    <button class="btn btn-default btn-nav js-p-home-gallery-btn">Gallery</button>
+  </div>
 </div>
+
+<div class="p-home__info-panel js-p-home-panel-left">
+  <div class="p-home__panel">
+    <span class="p-home__panel__header">
+      Details
+      <button class="p-home__panel__x js-p-home-panel-x-btn"></button>
+    </span>
+    
+    <span class="p-home__info__content h6 em-high" style="padding:20px 0 20px 0;">Sunday, December 20, 2015<br>6:30 pm</span>
+    <span class="p-home__info__content h7">Crystal Ballroom, Renaissance Banquet</span>
+    <span class="p-home__info__content h8">1236 South Central Ave<br>Glendale, CA 91204</span>
+
+    <span class="p-home__info__content" style="padding-top: 50px">&#8227; Parking available by valet service free of charge. There is limited parking, so please chose to carpool if possible.</span>
+  </div>
+</div>
+
+<div class="p-home__info-panel p-home__info-panel-right js-p-home-panel-right">
+  <div class="p-home__panel">
+    <span class="p-home__panel__header">
+      RSVP
+      <button class="p-home__panel__x js-p-home-panel-x-btn"></button>
+    </span>
+
+    <form id="rsvpForm" class="screen-sm-mt+ p-home__rsvp-form">
+      <div style="padding-bottom: 10px;">
+        <label for="rsvp" class="p-home__info__label screen-sm-mt+">Will you be coming?</label>
+        <input type="radio" name="rsvp" id="rsvp-yes" value="1" class="radio-default radio-underline">
+        <label for="rsvp-yes">Yes</label>
+        <input type="radio" name="rsvp" id="rsvp-no" value="0" class="radio-default radio-underline">
+        <label for="rsvp-no">No</label>
+      </div>
+
+      <div style="padding-bottom: 10px;">
+        <label for="name" class="p-home__info__label">Email</label>
+        <input type="email" class="input input-default input-block" id="rsvp-email" name="email" placeholder="Your email">
+      </div>
+
+      <div style="padding-bottom: 10px;">
+        <label for="names" class="p-home__info__label">Name(s)</label>
+        <input type="text" class="input input-default input-block" id="rsvp-names" name="names" placeholder="Your name(s)">
+      </div>
+
+      <div style="padding-bottom: 10px;">
+        <label for="msg" class="p-home__info__label">Message</label>
+        <textarea type="text" class="textarea-panel input-default input-block" id="rsvp-msg" name="msg"></textarea>
+      </div>
+
+      <div id="rsvp-status" class="p-home__rsvp__status" style="color: #CC181E;"></div>
+
+      <button id="rsvp-submit" type="submit" class="btn btn-default btn-block screen-sm-mt+">submit</button>
+    </form>
+  </div>
+</div>
+
+<div class="p-home__billboard">
+  <!-- <div class="aligner bg-cover txt-c" style="height: 100%; background-image: url('http://static.squarespace.com/static/53c827a3e4b00a63fc062eb5/t/53e162a3e4b08ac0a8ecac68/1407279779644/DSC07168.jpg');"> -->
+  <!-- <div class="aligner bg-cover txt-c" style="height: 100%; background-image: url('http://i.imgbox.com/2f67Cl8k.png');"> -->
+  <div class="aligner bg-cover txt-c" style="height: 100%; background-image: url('http://i.imgbox.com/fJOdc2tE.png');">
+    <div class="aligner-item">
+      <h2 class="p-home__header--lg em-low">Fauzia & Matthew</h2>
+      <span class="p-home__text em-low">are getting married</span>
+    </div>
+  </div>
+</div>
+
+<div class="p-home__panel__center js-p-home-registry" style="max-width: 800px;">
+  <div class="p-home__panel">
+    <span class="p-home__panel__header">
+      Registry
+      <button class="p-home__panel__x js-p-home-panel-x-btn"></button>
+    </span>
+
+    <div class="h7" style="padding: 40px 0">Feel free to use one of the following registries for gift purchasing.</div>
+    <a href="http://www.amazon.com/registry/wedding/RYPRO7FMF49L" style="outline: 0;" target="_blank">
+      <img src="http://i.imgbox.com/OkFQ6ebj.png" style="width:100%; max-width: 180px;" alt="Amazon Registry">
+    </a>
+  </div>
+</div>
+
+<div class="p-home__panel__center js-p-home-gallery" style="max-width: 1200px;">
+  <div class="p-home__panel">
+    <span class="p-home__panel__header">
+      Gallery
+      <button class="p-home__panel__x js-p-home-panel-x-btn"></button>
+    </span>
+
+    <div class="h6 em-high txt-c" style="padding: 60px 0; ">Coming Soon!</div>
+    <div class="h7 p-home__panel__center__text" style="max-width: 800px;">Help us capture moments by taking pictures during the celebration and uploading them here.</div>
+  </div>
+</div>
+
+

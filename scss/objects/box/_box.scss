@@ -1,0 +1,26 @@
+.box {
+  padding: 50px 0;
+
+  @include bp(screen-md) {
+    padding: 60px 0;
+  }
+
+  @include bp(screen-lg) {
+    padding: 100px 0;
+  }
+}
+
+.box-alt {
+  background: $box-alt-bg;
+}
+
+
+    .box__header {
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      text-align: center;
+
+      @include bp(screen-lg) {
+        margin-bottom: 50px;
+      }
+    }

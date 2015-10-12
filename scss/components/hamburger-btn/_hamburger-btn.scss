@@ -1,0 +1,50 @@
+/*doc
+---
+title: Hamburger Button
+name: Hamburger Button
+category: Components - Hamburger Button
+---
+
+#### Hamburger Button
+
+```html_example
+<button class="btn hamburger-btn">
+  <div class="hamburger-box">
+    <span class="hamburger-bun hamburger-bun--top"></span>
+    <span class="hamburger-patty"></span>
+    <span class="hamburger-bun hamburger-bun--btm"></span>
+  </div>
+
+  <span class="hamburger-btn__label">menu</span>
+</button>
+```
+
+*/
+
+
+.hamburger-btn {
+  padding: 12px 15px;
+}
+
+
+.hamburger-box {
+  position:       relative;
+  display:        inline-block;
+  vertical-align: middle;
+}
+
+
+.hamburger-bun,
+.hamburger-patty {
+  position:   relative;
+  display:    block;
+  margin:     0 auto 4px;
+  width:      17px;
+  height:     1px;
+  background: $hamburger-color;
+}
+
+
+.hamburger-bun:last-child {
+  margin-bottom: 1px;
+}

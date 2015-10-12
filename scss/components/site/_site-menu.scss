@@ -1,0 +1,21 @@
+.site-menu {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  padding: 50px 0;
+}
+
+    .site-menu__list {
+      margin: 60px 0;
+    }
+
+    .site-menu__item +
+    .site-menu__item {
+      margin-top: 15px;
+    }
+
+    .site-menu__item > a {
+      text-transform: uppercase;
+      color: $site-menu-link-color;
+    }

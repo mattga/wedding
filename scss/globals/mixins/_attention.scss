@@ -1,0 +1,11 @@
+// When we give an element some ‘attention’.
+
+@mixin attention() {
+
+    &:hover,
+    &:active,
+    &:focus {
+        @content;
+    }
+
+}

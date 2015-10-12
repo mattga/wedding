@@ -1,0 +1,121 @@
+/*doc
+---
+title: Layout
+name: Layout
+category: Layouts - Layout
+---
+
+### Layout Constrained
+
+Constrain the width down to `xx pixels` (apply on Big Screen)
+
+```html_example
+<div class="layout-constrained">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa voluptate error, consectetur minus, praesentium quas natus. Sint quibusdam, recusandae cum modi, ratione eos cupiditate repellat adipisci blanditiis optio consequatur praesentium amet distinctio nemo quo quasi fuga voluptatibus illum corporis nihil dicta rem in. Commodi fugiat, dolor qui provident quam corrupti.</p>
+</div>
+```
+
+```html_example
+<div class="layout-constrained--sm">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa voluptate error, consectetur minus, praesentium quas natus. Sint quibusdam, recusandae cum modi, ratione eos cupiditate repellat adipisci blanditiis optio consequatur praesentium amet distinctio nemo quo quasi fuga voluptatibus illum corporis nihil dicta rem in. Commodi fugiat, dolor qui provident quam corrupti.</p>
+</div>
+```
+
+```html_example
+<div class="layout-constrained--lg">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa voluptate error, consectetur minus, praesentium quas natus. Sint quibusdam, recusandae cum modi, ratione eos cupiditate repellat adipisci blanditiis optio consequatur praesentium amet distinctio nemo quo quasi fuga voluptatibus illum corporis nihil dicta rem in. Commodi fugiat, dolor qui provident quam corrupti.</p>
+</div>
+```
+
+### Layout Push In
+
+* Push the content inside `xx pixels` in
+* Apply on big screen
+
+```html_example
+<div class="layout-push-in">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa voluptate error, consectetur minus, praesentium quas natus. Sint quibusdam, recusandae cum modi, ratione eos cupiditate repellat adipisci blanditiis optio consequatur praesentium amet distinctio nemo quo quasi fuga voluptatibus illum corporis nihil dicta rem in. Commodi fugiat, dolor qui provident quam corrupti.</p>
+</div>
+```
+
+### Layout Compressed
+
+* Padding top and bottom `xx pixels`
+* Apply on big screen
+
+```html_example
+<div class="layout-compressed">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa voluptate error, consectetur minus, praesentium quas natus. Sint quibusdam, recusandae cum modi, ratione eos cupiditate repellat adipisci blanditiis optio consequatur praesentium amet distinctio nemo quo quasi fuga voluptatibus illum corporis nihil dicta rem in. Commodi fugiat, dolor qui provident quam corrupti.</p>
+</div>
+```
+
+*/
+
+
+/*------------------------------------*\
+    ~ LAYOUT
+\*------------------------------------*/
+
+// Constraint layout with 900px width
+.layout-constrained {
+  @include bp(screen-lg) {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+
+.layout-constrained--sm {
+  @include bp(screen-lg) {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+}
+
+.layout-constrained--lg {
+  @include bp(screen-lg) {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+
+
+
+
+// Push the content in 40px
+.layout-push-in {
+
+  @include bp(screen-lg) {
+    padding: 40px;
+  }
+}
+
+.layout-push-in--sm {
+  @include bp(screen-lg) {
+    padding: 10px;
+  }
+}
+
+
+
+
+
+// Push the content top and bottom, compress like hamburger
+.layout-compressed {
+  @include bp(screen-lg) {
+    margin: 100px 0;
+  }
+}
+
+
+
+
+
+// Container cover the whole browser
+.layout-fixed-block {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

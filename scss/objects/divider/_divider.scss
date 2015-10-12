@@ -1,0 +1,31 @@
+/*doc
+---
+title: Dividers
+name: Dividers
+category: Objects - Dividers
+---
+
+#### Styles
+
+```html_example
+<hr class="divider-default">
+```
+
+*/
+
+hr {
+  // Remove the default hr border
+  border: none;
+  border-bottom: 1px solid;
+}
+
+
+// Styles
+.divider-default {
+  width: 15px;
+  border-width: 2px;
+  border-color: $divider-color;
+}
+
+
+

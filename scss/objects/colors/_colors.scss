@@ -1,0 +1,300 @@
+/*doc
+---
+title: Colors
+name: Colors
+category: Objects - Colors
+---
+
+#### Brand Colors
+
+<div class="grid">
+  <div class="col-sm-12 col-md-3">
+    <div class="chip">
+      <div class="chip-color bg-brand-1"></div>
+      <div class="chip-color-name">
+        <p>$brand-1</p>
+        <p>.bg-brand-1</p>
+        <p>.type-brand-1</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12 col-md-3">
+    <div class="chip">
+      <div class="chip-color bg-brand-2"></div>
+      <div class="chip-color-name">
+        <p>$brand-2</p>
+        <p>.bg-brand-2</p>
+        <p>.type-brand-2</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+#### Neutral Colors
+
+<div class="grid">
+  <div class="col-sm-12 col-md-3">
+    <div class="chip">
+      <div class="chip-color bg-neutral-1"></div>
+      <div class="chip-color-name">
+        <p>$gray-1</p>
+        <p>.bg-neutral-1</p>
+        <p>.type-neutral-1</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12 col-md-3">
+    <div class="chip">
+      <div class="chip-color bg-neutral-2"></div>
+      <div class="chip-color-name">
+        <p>$gray-2</p>
+        <p>.bg-neutral-2</p>
+        <p>.type-neutral-2</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12 col-md-3">
+    <div class="chip">
+      <div class="chip-color bg-neutral-3"></div>
+      <div class="chip-color-name">
+        <p>$gray-3</p>
+        <p>.bg-neutral-3</p>
+        <p>.type-neutral-3</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12 col-md-3">
+    <div class="chip">
+      <div class="chip-color bg-neutral-4"></div>
+      <div class="chip-color-name">
+        <p>$gray-4</p>
+        <p>.bg-neutral-4</p>
+        <p>.type-neutral-4</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12 col-md-3">
+    <div class="chip">
+      <div class="chip-color bg-neutral-5"></div>
+      <div class="chip-color-name">
+        <p>$gray-5</p>
+        <p>.bg-neutral-5</p>
+        <p>.type-neutral-5</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12 col-md-3">
+    <div class="chip">
+      <div class="chip-color bg-neutral-6"></div>
+      <div class="chip-color-name">
+        <p>$gray-6</p>
+        <p>.bg-neutral-6</p>
+        <p>.type-neutral-6</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12 col-md-3">
+    <div class="chip">
+      <div class="chip-color bg-neutral-7"></div>
+      <div class="chip-color-name">
+        <p>$gray-7</p>
+        <p>.bg-neutral-7</p>
+        <p>.type-neutral-7</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+#### Warn Colors
+
+<div class="grid">
+  <div class="col-sm-12 col-md-3">
+    <div class="chip">
+      <div class="chip-color bg-warn-1"></div>
+      <div class="chip-color-name">
+        <p>$warn-1</p>
+        <p>.bg-warn-1</p>
+        <p>.type-warn-1</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+#### Accent Colors
+
+<div class="grid">
+  <div class="col-sm-12 col-md-3">
+    <div class="chip">
+      <div class="chip-color bg-accent-1"></div>
+      <div class="chip-color-name">
+        <p>$accent-1</p>
+        <p>.bg-accent-1</p>
+        <p>.type-accent-1</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12 col-md-3">
+    <div class="chip">
+      <div class="chip-color bg-accent-2"></div>
+      <div class="chip-color-name">
+        <p>$accent-2</p>
+        <p>.bg-accent-2</p>
+        <p>.type-accent-2</p>
+      </div>
+    </div>
+  </div>
+</div>
+*/
+
+/*======================================
+ * Brand Color(s)
+ ===*/
+.bg-brand-1 {
+  background: $brand-color-1;
+}
+
+.type-brand-1 {
+  color: $brand-color-1;
+}
+
+
+.bg-brand-2 {
+  background: $brand-color-2;
+}
+
+.type-brand-2 {
+  color: $brand-color-2;
+}
+
+
+
+
+
+/*======================================
+ * Neutral Color(s)
+ ===*/
+.bg-neutral-1 {
+  background: $neutral-color-1;
+}
+
+.type-neutral-1 {
+  color: $neutral-color-1;
+}
+
+
+.bg-neutral-2 {
+  background: $neutral-color-2;
+}
+
+.type-neutral-2 {
+  color: $neutral-color-2;
+}
+
+
+.bg-neutral-3 {
+  background: $neutral-color-3;
+}
+
+.type-neutral-3 {
+  color: $neutral-color-3;
+}
+
+
+.bg-neutral-4 {
+  background: $neutral-color-4;
+}
+
+.type-neutral-4 {
+  color: $neutral-color-4;
+}
+
+.bg-neutral-5 {
+  background: $neutral-color-5;
+}
+
+.type-neutral-5 {
+  color: $neutral-color-5;
+}
+
+.bg-neutral-6 {
+  background: $neutral-color-6;
+}
+
+.type-neutral-6 {
+  color: $neutral-color-6;
+}
+
+.bg-neutral-6 {
+  background: $neutral-color-6;
+}
+
+.type-neutral-7 {
+  color: $neutral-color-7;
+}
+
+
+
+
+
+
+/*======================================
+ * Warn Color(s)
+ ===*/
+.bg-warn-1 {
+ background: $warn-color-1;
+}
+
+.type-warn-1 {
+ color: $warn-color-1;
+}
+
+
+
+
+
+/*======================================
+ * Accent Color(s)
+ ===*/
+.bg-accent-1 {
+background: $accent-color-1;
+}
+
+.type-accent-1 {
+color: $accent-color-1;
+}
+
+
+.bg-accent-2 {
+ background: $accent-color-2;
+}
+
+.type-accent-2 {
+ color: $accent-color-2;
+}
+
+
+// Use only in Hologram Styleguide !!!
+.chip {
+  padding: 0 10px;
+}
+
+    .chip-color {
+      min-height: 50px;
+    }
+
+    .chip-color-name {
+      color: $gray-2;
+      padding-top: 5px;
+    }

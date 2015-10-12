@@ -1,0 +1,241 @@
+/*======================================
+ * BASE
+ =======================================*/
+
+/**
+*
+* DO NOT use these variables directly in components.
+* Assign them to component specific variables
+*
+*/
+
+
+/* List of colors
+--------------------------*/
+ $brand-1: #000;
+ $brand-2: #C6AD85;
+
+ $gray-1: #101010;
+ $gray-2: #313131;
+ $gray-3: #616161;
+ $gray-4: #979797;
+ $gray-4_5: #C5C5C5;
+ $gray-5: #DEDEDE;
+ $gray-5_5: #F2F2F2;
+ $gray-6: #FAFAFA;
+ $gray-7: #fff;
+
+ $warn-1: #DC953A;
+
+ $accent-1: #3393C8;
+ $accent-2: #42975C;
+
+ $catchy-1:#FF0000;
+
+
+
+
+/* Background and type colors
+--------------------------*/
+$brand-color-1: $brand-1;
+$brand-color-2: $brand-2;
+
+$neutral-color-1: $gray-1;
+$neutral-color-2: $gray-2;
+$neutral-color-3: $gray-3;
+$neutral-color-4: $gray-4;
+$neutral-color-5: $gray-5;
+$neutral-color-6: $gray-6;
+$neutral-color-7: $gray-7;
+
+$warn-color-1: $warn-1;
+
+$accent-color-1: $accent-1;
+$accent-color-2: $accent-2;
+
+
+
+$panel-transition: 400ms;
+
+
+
+/* Typography
+--------------------------*/
+
+// Use fontSize mixin when use Typography
+$base-font-size: 13px;
+$base-font-size-lg: 7px; // 7 * 200% = 14px
+
+$base-font-family: 'Raleway', sans-serif,  serif, Helvetica, Arial, sans-serif;
+$base-header-family: 'Raleway', sans-serif,  serif, Helvetica, Arial, sans-serif;
+$base-line-height: 1.8;
+$base-spacing: 1em;
+$base-text-color: $gray-1;
+
+/* Type Color */
+$type-highlight: $accent-1;
+$type-lowlight: $gray-4;
+
+
+
+
+
+/* Link
+--------------------------*/
+$link-color: $gray-1;
+$link-hover-color: $gray-1;
+
+
+
+
+
+/* Button
+--------------------------*/
+$btn-bg-default: $gray-7;
+$btn-text-default: $gray-1;
+$btn-hover-default: $gray-4;
+$btn-active-default: $gray-5;
+
+$btn-underline_size: 2px;
+
+$btn-text-primary: $gray-1;
+
+$btn-border-default: $gray-1;
+
+
+
+
+
+/* Image
+--------------------------*/
+$img-border-color: $gray-7;
+
+
+
+
+
+/* Inputs
+--------------------------*/
+$input-border-color: $gray-3;
+$input-type-color: $gray-3;
+
+
+
+
+
+/* Divider
+--------------------------*/
+$divider-color: $gray-7;
+
+
+
+
+
+/* Box
+--------------------------*/
+$box-alt-bg: $gray-6;
+
+
+
+
+
+/*======================================
+ * INUIT CSS (Plugin)
+ =======================================*/
+
+/* Spacing
+--------------------------*/
+$inuit-margin: 20px;
+$inuit-padding: 20px;
+
+
+
+
+
+/*======================================
+ * COMPONENTS
+ =======================================*/
+
+/* Hamburger btn
+--------------------------*/
+$hamburger-color: $gray-7;
+
+
+
+
+
+/* Site Menu
+--------------------------*/
+ $site-menu-link-color: $gray-7;
+ $site-menu-link-active-color: $brand-1;
+
+
+
+
+
+
+/* Logo
+--------------------------*/
+$logo-color: $gray-7;
+$logo-color-alt: $brand-1;
+
+
+
+
+
+/* Navigation
+--------------------------*/
+$navigation-bg: $gray-7;
+$navigation-height: 80px;
+
+
+
+
+
+/* Site Header
+--------------------------*/
+$site-header-height: 50px;
+$site-header-bg: $brand-1;
+
+
+
+
+
+/* Site Header Panel
+--------------------------*/
+$site-header-panel-bg: $gray-1;
+$site-header-panel-bg-alt: $gray-7;
+
+
+
+
+
+/* Site Content
+--------------------------*/
+$site-content-padding-top: $navigation-height;
+$site-content-padding-left: 300px;
+
+
+
+
+
+/* Site Logo
+--------------------------*/
+$site-logo-color: $gray-7;
+
+
+
+
+
+/* Overlay
+--------------------------*/
+$overlay-bg: rgba($gray-1,0.2);
+
+
+
+
+
+/*======================================
+ * PAGES
+ =======================================*/
+

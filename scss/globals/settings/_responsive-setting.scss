@@ -1,0 +1,22 @@
+///*------------------------------------*\
+//    ~ SETTINGS-RESPONSIVE
+//\*------------------------------------*/
+
+// Hold our breakpoint aliases and conditions in a list.
+//
+// These can be invoked later on via the `media-query()` mixin found in
+// `_tools.responsive`.
+
+$breakpoints: (
+    "screen-sm"         "screen and (min-width: 0)",
+    "screen-md"           "screen and (min-width: 550px)",
+    "screen-lg"           "screen and (min-width: 1200px)",
+    "screen-xlg"           "screen and (min-width: 1200px)",
+    "screen-xxlg"           "screen and (min-width: 1400px)",
+    "screen-gg"        "screen and (min-width: 1500px)",
+    "screen-max-sm"       "screen and (max-width: 549px)",
+    "screen-max-md"       "screen and (max-width: 1199px)"
+
+    // Uncomment this when need Retina
+    // "retina"              "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)"
+) !default;

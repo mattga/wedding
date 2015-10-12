@@ -1,0 +1,32 @@
+
+.radio-underline:empty + label {
+
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: $btn-text-default;
+
+  border-bottom: $btn-underline_size solid rgba(0,0,0,0);
+  padding: 0px;
+  margin: 0 0 0 10px;
+}
+
+.radio-underline:not(:checked) + label:hover {
+  color: $btn-hover-default;
+  transition: all 0.2s ease;
+}
+
+.radio-underline:not(:checked) + label:active {
+  color: $btn-active-default;
+  transition: all 0.2s ease;
+}
+
+.radio-underline:checked + label {
+  border-color: $gray-1;
+  transition: all 0.5s ease;
+}
+
+
+

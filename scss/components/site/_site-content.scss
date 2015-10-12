@@ -1,0 +1,9 @@
+.site-content {
+  // On small screen, the site header is set to fixed so it is no longer in the site flow. In other word, it will stay on top of whatever components. Therefore, to not let our site-content partially hidden by the site header, we need to push its' content down some pixel
+  padding-top: $site-content-padding-top;
+  overflow: hidden;
+
+  @include bp(screen-lg) {
+    padding: 0 0 0 $site-content-padding-left;
+  }
+}

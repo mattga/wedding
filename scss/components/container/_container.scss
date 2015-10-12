@@ -1,0 +1,24 @@
+/*doc
+---
+title: Container
+name: Container
+category: Components - Container
+---
+
+##### Styles
+
+```html_example
+<div class="container bg-neutral-1">
+  <p class="type-neutral-7">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus earum, tempore! Dolor, quae, repellendus. Accusamus accusantium recusandae fugiat maiores tempore.</p>
+</div>
+```
+
+*/
+
+.container {
+  position: relative;
+  padding: 20px;
+}
+
+
+

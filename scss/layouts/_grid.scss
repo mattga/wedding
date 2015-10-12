@@ -1,0 +1,168 @@
+/*doc
+---
+title: Grid
+name: Grid
+category: Layouts - Grid
+---
+
+
+`.grid-show` class is only for demo-purposes
+
+```html_example
+<div class="grid grid-show">
+  <div class="col-sm-12 col-md-6"></div>
+  <div class="col-sm-12 col-md-6"></div>
+</div>
+
+<div class="grid grid-show">
+  <div class="col-sm-12 col-lg-4"></div>
+  <div class="col-sm-12 col-lg-4"></div>
+  <div class="col-sm-12 col-lg-4"></div>
+</div>
+
+<div class="grid grid-show">
+  <div class="col-sm-12 col-lg-3"></div>
+  <div class="col-sm-12 col-lg-3"></div>
+  <div class="col-sm-12 col-lg-3"></div>
+  <div class="col-sm-12 col-lg-3"></div>
+</div>
+
+<div class="grid grid-show">
+  <div class="col-sm-12 col-md-4 col-lg-2"></div>
+  <div class="col-sm-12 col-md-4 col-lg-2"></div>
+  <div class="col-sm-12 col-md-4 col-lg-2"></div>
+  <div class="col-sm-12 col-md-4 col-lg-2"></div>
+  <div class="col-sm-12 col-md-4 col-lg-2"></div>
+  <div class="col-sm-12 col-md-4 col-lg-2"></div>
+</div>
+
+```
+*/
+
+
+
+
+// Grid
+.grid {
+  @include clearfix-me(micro);
+  @include add-gutter(0);
+  @include add-grid(12);
+}
+
+
+
+
+
+// Small Screen
+.col-sm-12 {
+  @include grid-span(12, 1, $output-style: 'float');
+}
+
+.col-sm-6 {
+  @include grid-span(6, 1, $output-style: 'float');
+}
+
+
+
+
+
+// Medium Screen
+.col-md-8 {
+  @include layout-at(12,600px) {
+    @include grid-span(8, 1, $output-style: 'float');
+  }
+}
+
+.col-md-6 {
+  @include layout-at(12,600px) {
+    @include grid-span(6, 1, $output-style: 'float');
+  }
+}
+
+    .col-md-6--reverse {
+      &:first-child {
+        @include layout-at(12,900px) {
+          @include grid-span(6, 7, $output-style: 'isolation');
+        }
+      }
+
+      &:last-child {
+        @include layout-at(12,900px) {
+          @include grid-span(6, 1, $output-style: 'isolation');
+        }
+      }
+    }
+
+
+
+.col-md-4 {
+  @include layout-at(12,600px) {
+    @include grid-span(4, 1, $output-style: 'float');
+  }
+}
+
+.col-md-3 {
+  @include layout-at(12,600px) {
+    @include grid-span(3, 1, $output-style: 'float');
+  }
+}
+
+.col-md-2 {
+  @include layout-at(12,600px) {
+    @include grid-span(2, 1, $output-style: 'float');
+  }
+}
+
+
+
+
+
+// Large Screen
+.col-lg-8 {
+  @include layout-at(12,900px) {
+    @include grid-span(8, 1, $output-style: 'float');
+  }
+}
+
+.col-lg-6 {
+  @include layout-at(12,900px) {
+    @include grid-span(6, 1, $output-style: 'float');
+  }
+}
+
+.col-lg-3 {
+  @include layout-at(12,900px) {
+    @include grid-span(3, 1, $output-style: 'float');
+  }
+}
+
+.col-lg-4 {
+  @include layout-at(12,900px) {
+    @include grid-span(4, 1, $output-style: 'float');
+  }
+}
+
+.col-lg-2 {
+  @include layout-at(12,900px) {
+    @include grid-span(2, 1, $output-style: 'float');
+  }
+}
+
+
+
+
+
+// Use only in Hologram Styleguide !!!
+.grid-show {
+  [class^='col-'] {
+    &:before {
+      content: attr(class) "\a" attr(grid-content);
+      white-space: pre;
+      display: block;
+      background-color: #F8F8F8;
+      padding: 10px;
+      outline: 1px solid #b4b4b4;
+      @include fontSize(10px);
+    }
+  }
+}

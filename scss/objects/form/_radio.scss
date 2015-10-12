@@ -1,0 +1,163 @@
+/*------------------------------------*\
+    ~ CUSTOM RADIO BUTTONS
+\*------------------------------------*/
+
+/*
+ * Change the default UI of the radio button
+ *
+ */
+
+
+/*----------------------------*\
+    ~ BASE RADIO BUTTON
+\*----------------------------*/
+
+/*
+ * 1) Hide the Button, we won't design over this button
+ *
+ */
+
+.radio-default {
+  display: none; /* [1] */
+}
+
+
+/*
+ * 1) Utilize the Label and "Checked" State of the Radio Button to make some cool design
+ *
+ */
+
+.radio-default + label { /* [1] */
+
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  /* DEFAULT SKIN */
+  background: #fafafa;
+  color: black;
+
+}
+
+
+
+
+
+/*----------------------------*\
+    ~ CIRCLE RADIO BUTTON
+    ~ Extend "radio-default"
+\*----------------------------*/
+
+
+/*
+ * 1) Overwrite the base "radio-default"
+ *
+ */
+
+$radio-circle-size: 44px;
+
+.radio-circle + label {
+  width: $radio-circle-size;
+  height: $radio-circle-size;
+  line-height: $radio-circle-size;
+  padding: 0; /* [1] */
+
+  @include fontSize(12px);
+
+  border-radius: 100%;
+
+  @include bp(screen-md) {
+    @include fontSize(5px);
+  }
+
+  @include bp(screen-lg) {
+    @include fontSize(6px);
+  }
+}
+
+
+
+
+
+/*----------------------------*\
+    ~ DIAMOND RADIO
+    ~ Extend "radio-default"
+\*----------------------------*/
+$radio-diamond-size: 40px;
+
+.radio-diamond + label {
+  padding: 0;
+  display: inline-block;
+  width: $radio-diamond-size;
+  height: $radio-diamond-size;
+  line-height: $radio-diamond-size;
+  @include fontSize(16px);
+  transform: rotate(45deg);
+}
+
+    .radio-diamond__text {
+      display: block;
+      transform: rotate(-45deg);
+    }
+
+
+
+
+
+/*----------------------------*\
+    ~ HALLOW RADIO
+    ~ Extend "radio-default"
+\*----------------------------*/
+
+.radio-hollow + label {
+  background: transparent;
+  color: black;
+  border: 1px solid black;
+}
+
+
+
+
+
+/*----------------------------*\
+    ~ THICK BORDER
+\*----------------------------*/
+.radio-thick-border + label {
+  border-width: 2px;
+  font-weight: bold;
+  line-height: $radio-diamond-size;
+}
+
+
+
+
+
+/*----------------------------*\
+    ~ SHADOW
+\*----------------------------*/
+.radio-shadow + label {
+  box-shadow: 1px 1px 1px rgba(black,0.07);
+}
+
+
+
+
+
+/*----------------------------*\
+    ~ STRETCH RADIO
+\*----------------------------*/
+
+.radio-stretch + label {
+  width: 100%;
+  padding: 10px 0;
+}
+
+
+
+
+
+
+

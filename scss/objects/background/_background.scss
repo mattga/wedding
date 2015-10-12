@@ -1,0 +1,48 @@
+/*doc
+---
+title: Background
+name: Background
+category: Objects - Background
+---
+##### Cover
+
+Background Cover uses an image as background for container
+
+```html_example
+<div class='container bg-cover'>
+  <h6 class='type-neutral-7 txt-c'>Cover Background</h6>
+</div>
+```
+
+##### Darken
+
+This class usually uses with `.bg-cover` to darken the background image to put more emphasize on the texts
+
+```html_example
+<div class='bg-cover bg-darken'>
+  <div class='container'>
+    <h6 class='type-neutral-7 txt-c'>Cover Background</h6>
+  </div>
+</div>
+```
+
+*/
+
+.bg-cover {
+  position: relative;
+  background: no-repeat center center;
+  background-size: cover;
+  background-image: url('http://dummyimage.com/600x400/e6e6e6/d6d6d6.gif');
+}
+
+.bg-darken {
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($neutral-color-1,0.45);
+  }
+}

@@ -1,0 +1,30 @@
+/*doc
+---
+title: Logo
+name: Logo
+category: Components - Logo
+---
+
+#### Site Logo
+
+```html_example
+<a href="#" class="site-logo">
+  <span class="type-brand-2">Brand</span>
+</a>
+```
+
+*/
+
+.site-logo {
+  position: relative;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  color: $site-logo-color;
+  font-weight: bold;
+  @include fontSize(18px);
+
+  @include bp(screen-lg) {
+    @include fontSize(9px);
+  }
+}
+

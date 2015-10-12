@@ -1,0 +1,115 @@
+/*doc
+---
+title: Vertical Align
+name: Vertical Align
+category: Layouts - Vertical Align
+---
+
+From http://styleguide.cfapps.io/layout.html#vertical_align
+
+"The Aligner allows you to vertically align children to the center. Its height is set by default to 300px."
+
+```html_example
+<div class="aligner txt-c">
+  <div class="aligner-item">
+    Centered Content
+  </div>
+</div>
+```
+
+```html_example
+<div class="aligner txt-c">
+  <div class="aligner-item aligner-item-top">
+    Align Top
+  </div>
+</div>
+```
+
+```html_example
+<div class="aligner txt-c">
+  <div class="aligner-item aligner-item-bottom">
+    Align Bottom
+  </div>
+</div>
+```
+
+##### Vertical Align Alternate
+
+This vertical align turns containers' "block" behavior into "inline-block". The example below if uses "aligner-item", only "Click C" is clickable
+
+```html_example
+<div class="aligner txt-c">
+  <div class="aligner-item-alt">
+    <a href="#">Click a</a>
+  </div>
+
+  <div class="aligner-item-alt aligner-item-alt-left">
+    <a href="#">Click b</a>
+  </div>
+
+  <div class="aligner-item-alt aligner-item-alt-right">
+    <a href="#">Click c</a>
+  </div>
+</div>
+```
+
+
+##### Aligner uses with Background
+
+```html_example
+<div class="bg-cover bg-darken">
+  <div class="aligner">
+    <div class="aligner-item">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quaerat in voluptates fugit numquam architecto facilis laboriosam provident suscipit veritatis.</p>
+    </div>
+  </div>
+</div>
+```
+
+*/
+
+.aligner {
+  position: relative;
+  height:   300px;
+}
+
+    .aligner-item {
+      position:  absolute;
+      top:       3%;
+      left:      0;
+      /*transform: translate(0, -50%);*/
+      width:     100%;
+      height:    auto;
+    }
+
+    .aligner-item-top {
+      top:       0;
+      transform: translate(0, 0);
+    }
+
+    .aligner-item-bottom {
+      top:       auto;
+      bottom:    0;
+      transform: translate(0, 0);
+    }
+
+
+    // Use "aligner alt" to transform "block" behavior into "inline-block"
+    .aligner-item-alt {
+      position:  absolute;
+      top:       50%;
+      left:      50%;
+      transform: translate(-50%, -50%);
+      height:    auto;
+    }
+
+    .aligner-item-alt-left {
+      left: 0;
+      transform: translate(0, -50%);
+    }
+
+    .aligner-item-alt-right {
+      left: auto;
+      right: 0;
+      transform: translate(0, -50%);
+    }

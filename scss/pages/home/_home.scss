@@ -1,0 +1,134 @@
+.p-home__billboard {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+.p-home__header--lg {
+  font-size: 40px;
+  margin-top: 200px;
+  margin-bottom: 10px;
+  animation: fadein 1.5s ease-in;
+
+  @include bp(screen-md) {
+    font-size: 90px;
+  }
+}
+
+
+.p-home__text {
+  margin-bottom: 20px;
+  display: block;
+  text-transform: uppercase;
+  font-size: 28px;
+  animation: fadein 2.5s ease-in;
+
+  @include bp(screen-md) {
+    font-size: 20px;
+  }
+}
+
+
+.p-home__info-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-100%, 0);
+  transition: transform $panel-transition ease;
+
+  width: 90%;
+  height: 100%;
+  max-width: 400px;
+  background: $gray-5_5;
+
+  @include layer(p-home-info-panel);
+}
+
+.p-home__info-panel-right {
+  left: auto;
+  right: 0;
+  transform: translate(100%, 0);
+  transition: transform $panel-transition ease;
+}
+
+.p-home__info-panel.is-active {
+  transform: translate(0, 0);
+  transition: transform $panel-transition ease;
+}
+
+.p-home__panel {
+  padding: 25px 25px;
+  text-align: center;
+}
+
+.p-home__panel__header {
+  text-align: left;
+  display: block;
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 0 0 5px 0;
+  margin: 0 0 30px 0;
+  border-bottom: 2px solid $gray-4_5;
+}
+
+.p-home__panel__x {
+  position: fixed;
+  margin: 0;
+  top: 10px;
+  right: 26px;
+
+  color: $gray-1;
+  font-size: 30px;
+}
+
+.p-home__panel__x:after {
+  content: '\d7';
+}
+
+.p-home__info__content {
+  text-align: center;
+  display: block;
+}
+
+.p-home__rsvp-form {
+  text-align: left;
+}
+
+.p-home__rsvp__status {
+  text-align: center;
+}
+
+.p-home__panel__center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  height: 85%;
+  max-width: 1200px;
+  pointer-events: none;
+
+  background: $gray-5_5;
+  opacity: 0;
+
+  @include layer(p-home-center-panel);
+}
+
+.p-home__panel__center.is-active {
+  opacity: 1;
+  transition: opacity $panel-transition ease;
+  pointer-events: auto;
+}
+
+.p-home__panel__center__text {
+  text-align: center;
+    width: 50%;
+    margin: 0 auto;
+  // transform: translate(50%, 0);
+}
+
+

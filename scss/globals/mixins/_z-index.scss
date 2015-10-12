@@ -1,0 +1,12 @@
+$layers: (
+  site-header: 10,
+  navigation: 10,
+  overlay: 100,
+  site-header-panel: 200,
+  p-home-info-panel: 150,
+  p-home-center-panel: 160
+);
+
+@mixin layer($layer-name) {
+  z-index: map-get($layers, $layer-name);
+};

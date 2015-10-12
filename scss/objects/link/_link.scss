@@ -1,0 +1,22 @@
+/**
+* @desc         Link
+* @name         link
+* @author
+* @tested
+* @requires     variables.scss
+*/
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+  }
+}
+
+.link-block {
+  display: block;
+  overflow: hidden;
+}

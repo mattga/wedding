@@ -1,0 +1,216 @@
+/*doc
+---
+title: Buttons
+name: Buttons
+category: Objects - Buttons
+---
+
+##### Sizes
+
+```html_example
+<button class="btn btn-default">Default Size</button>
+<button class="btn btn-lg btn-default">Big</button>
+```
+
+##### Full-width
+
+```html_example
+<button class="btn btn-block btn-default">Full-width</button>
+```
+
+##### Styles
+
+```html_example
+<button class="btn btn-default">Default</button>
+<button class="btn btn-primary">Primary</button>
+```
+
+##### With Icon
+
+```html_example
+<button class="btn btn-default btn-icon"><i class="icon icon-search"></i><span>Search</span></button>
+```
+
+*/
+
+
+
+//Resets button style
+button {
+  background: none;
+  border: 0;
+}
+
+
+
+
+/*----------------------------*\
+    ~ BASE
+\*----------------------------*/
+
+.btn {
+  /* STRUCTURE */
+  display: inline-block;
+  margin: 0;
+  appearance: none;
+  position: relative;
+  cursor: pointer;
+  outline: 0;
+  outline-offset: 0;
+  text-decoration: none;
+  border: 0;
+  background: none;
+  text-align: center;
+
+
+  /* SKIN */
+  padding: 10px;
+  text-transform: uppercase;
+  @include fontSize(14px);
+
+  @include bp(screen-lg) {
+    // 6px * 200% = 12px
+    @include fontSize(7px);
+  }
+
+}
+
+
+
+
+
+
+/*----------------------------*\
+    ~ SIZES
+\*----------------------------*/
+
+.btn-lg {
+  padding: 17px 50px;
+  @include fontSize(12px);
+
+  @include bp(screen-lg) {
+    // 7px * 200% = 14px
+    @include fontSize(7px);
+  }
+}
+
+
+
+
+
+/*----------------------------*\
+    ~ SKINS
+\*----------------------------*/
+
+.btn-default {
+  transition: color 70ms ease-in;
+  // background: $btn-bg-default;
+  color:      $btn-text-default;
+
+  @include attention() {
+    &:hover {
+      color: $btn-hover-default;
+      transition: all 0.1s ease-out;
+    }
+    // &:active {
+    //   color: $btn-active-default;
+      // transition: all 0.2s ease;
+    // }
+  }
+}
+
+.btn-primary {
+  border: 1px solid $btn-border-default;
+  color: $btn-text-primary;
+}
+
+.btn-nav {
+  transition: color 200ms ease-in;
+  // background: $btn-bg-default;
+  color:      $btn-text-default;
+
+  border-bottom: $btn-underline_size solid rgba(0,0,0,0);
+  padding: 0;
+  margin: 15px 10px;
+
+  @include attention() {
+   //  &:focus { 
+   //    border-color: $gray-1;
+   //    transition: all 850ms ease;
+   // }
+ }
+}
+
+.btn-nav_underline {
+  border-color: $gray-1;
+  transition: all 850ms ease;
+}
+
+/*----------------------------*\
+    ~ FULL-WIDTH
+\*----------------------------*/
+
+.btn-block {
+  /* STRUCTURE */
+  display: block;
+  width: 100%;
+}
+
+
+
+
+
+/*----------------------------*\
+    ~ WITH ICON
+\*----------------------------*/
+
+.btn-icon {
+  @include fontSize(12px);
+
+  @include bp(screen-lg) {
+    @include fontSize(6px);
+  }
+
+
+  > .icon {
+    &:before {
+      vertical-align: middle;
+    }
+  }
+
+  > span {
+    padding-left: 5px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
