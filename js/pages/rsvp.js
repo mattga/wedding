@@ -3,8 +3,8 @@
 
   var req;
 
-  $( "#rsvpForm" ).submit(function( event ) {
-    event.preventDefault();
+  $( "#rsvpForm" ).submit(function( ev ) {
+    ev.preventDefault();
 
     $( "#rsvp-status" ).empty();
     $( "#rsvp-status" ).css({"color":"#CC181E"});

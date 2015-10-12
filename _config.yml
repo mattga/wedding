@@ -1,9 +1,10 @@
 # Site settings
 title: "Fauzia & Matthew's Wedding"
 email: wedding@mgardner.me
-description: "Fauzia & Matthwe's Wedding site. Find event info, RSVP, browse a gallery, and access our gift registries."
-baseurl: ""
-url: "http://wedding.mgardner.me"
+description: "Fauzia & Matthew's Wedding site. Find event info, RSVP, browse a gallery, and access our gift registries."
+baseurl: "http://wedding.mgardner.me"
+twitter_username: jekyllrb
+github_username:  jekyll
 
 # Build settings
 markdown: kramdown
