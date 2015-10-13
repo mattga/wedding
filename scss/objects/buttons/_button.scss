@@ -66,13 +66,6 @@ button {
   /* SKIN */
   padding: 10px;
   text-transform: uppercase;
-  @include fontSize(14px);
-
-  @include bp(screen-lg) {
-    // 6px * 200% = 12px
-    @include fontSize(7px);
-  }
-
 }
 
 
@@ -86,12 +79,7 @@ button {
 
 .btn-lg {
   padding: 17px 50px;
-  @include fontSize(12px);
-
-  @include bp(screen-lg) {
-    // 7px * 200% = 14px
-    @include fontSize(7px);
-  }
+  line-height: 1.0;
 }
 
 
@@ -126,12 +114,16 @@ button {
 
 .btn-nav {
   transition: color 200ms ease-in;
-  // background: $btn-bg-default;
   color:      $btn-text-default;
 
   border-bottom: $btn-underline_size solid rgba(0,0,0,0);
   padding: 0;
   margin: 15px 10px;
+  font-size: 15px;
+
+  @include bp(screen-xxxsm) {
+    font-size: 12px;
+  }
 
   @include attention() {
    //  &:focus { 
@@ -165,12 +157,6 @@ button {
 \*----------------------------*/
 
 .btn-icon {
-  @include fontSize(12px);
-
-  @include bp(screen-lg) {
-    @include fontSize(6px);
-  }
-
 
   > .icon {
     &:before {

@@ -12,9 +12,13 @@
 }
 
 .nav-buttons {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: auto;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 330px;
+
+  @include bp(screen-xxxsm) {
+    width: 285px;
+  }
 }

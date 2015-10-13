@@ -8,15 +8,16 @@
 // `_tools.responsive`.
 
 $breakpoints: (
-    "screen-sm"         "screen and (min-width: 0)",
-    "screen-md"           "screen and (min-width: 550px)",
-    "screen-lg"           "screen and (min-width: 1200px)",
-    "screen-xlg"           "screen and (min-width: 1200px)",
-    "screen-xxlg"           "screen and (min-width: 1400px)",
-    "screen-gg"        "screen and (min-width: 1500px)",
-    "screen-max-sm"       "screen and (max-width: 549px)",
-    "screen-max-md"       "screen and (max-width: 1199px)"
+    "screen-min"            "screen and (max-width: 305px)",
+    "screen-xxxsm"          "screen and (max-width: 350px)",
+    "screen-xxsm"           "screen and (max-width: 370px)",
+    "screen-xxsm-iphone6"   "screen and (max-width: 430px)",
+    "screen-xsm"            "screen and (max-width: 490px)",
+    "screen-sm"             "screen and (max-width: 680px)",
+    "screen-md"             "screen and (max-width: 800px)",
+    "screen-lg"             "screen and (max-width: 1200px)",
+    "screen-max"            "screen and (min-width: 1200px)",
 
-    // Uncomment this when need Retina
+    // // Uncomment this when need Retina
     // "retina"              "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)"
 ) !default;

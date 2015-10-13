@@ -1007,10 +1007,9 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
 
   var req;
 
-  $( "#rsvpForm" ).submit(function( event ) {
-    event.preventDefault();
+  $( "#rsvpForm" ).submit(function( ev ) {
+    ev.preventDefault();
 
-    $( "#rsvp-submit" ).prop("disabled",true);
     $( "#rsvp-status" ).empty();
     $( "#rsvp-status" ).css({"color":"#CC181E"});
 
@@ -1039,11 +1038,17 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
     }
 
     if (ok) {
+      $( "#rsvp-status" ).css({"color":"#101010"});
+      $( "#rsvp-status" ).append("Submitting...");
+
       req = $.post( 'php/rsvp.php', $form.serialize(), function(data, status){
+        $( "#rsvp-status" ).css({"color":"#CC181E"});
+        $( "#rsvp-status" ).empty();
+
         if (data === "invalid email") {
           $( "#rsvp-status" ).append('This email is not on our guestlist. Please use the email at which you received an invite.');
         } else if (data === "success" ) {
-          $( "#rsvp-status" ).css({"color":"#00B878"});
+          $( "#rsvp-status" ).css({"color":"#00B878"}); // success color
           if (ans == 1) {
             $( "#rsvp-status" ).append('Thank you for your RSVP. We are excited to see you at our cellebration!');
           } else {
@@ -1057,10 +1062,7 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
         } else {
           alert("Sorry, something went wrong. Please contact Matthew or Fauzia if you are seeing this.\nData: " + data);
         }
-        $( "#rsvp-submit" ).prop("disabled",false);
       });
-} else {
-  $( "#rsvp-submit" ).prop("disabled",false);
 }
 });
 

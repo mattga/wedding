@@ -8,26 +8,55 @@
 
 
 .p-home__header--lg {
-  font-size: 40px;
-  margin-top: 200px;
-  margin-bottom: 10px;
+  font-size: 90px;
+  margin: 20px 0 0 0;
   animation: fadein 1.5s ease-in;
 
   @include bp(screen-md) {
-    font-size: 90px;
+    font-size: 80px;
+  }
+  @include bp(screen-sm) {
+    font-size: 60px;
+  }
+  @include bp(screen-xsm) {
+    font-size: 50px;
+  }
+  @include bp(screen-xxsm-iphone6) {
+    font-size: 45px;
+  }
+  @include bp(screen-xxsm) {
+    font-size: 40px;
+  }
+  @include bp(screen-xxxsm) {
+    font-size: 38px;
+  }
+  @include bp(screen-min) {
+    font-size: 30px;
   }
 }
 
 
 .p-home__text {
-  margin-bottom: 20px;
+  margin-top: 0px;
   display: block;
   text-transform: uppercase;
   font-size: 28px;
-  animation: fadein 2.5s ease-in;
+  animation: fadein 2.0s ease-in;
 
   @include bp(screen-md) {
+    font-size: 25px;
+  }
+  @include bp(screen-sm) {
     font-size: 20px;
+  }
+  @include bp(screen-xsm) {
+    font-size: 18px;
+  }
+  @include bp(screen-xxsm) {
+    font-size: 15px;
+  }
+  @include bp(screen-min) {
+    font-size: 12px;
   }
 }
 
@@ -62,13 +91,14 @@
 .p-home__panel {
   padding: 25px 25px;
   text-align: center;
+  overflow: scroll;
 }
 
 .p-home__panel__header {
   text-align: left;
   display: block;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 18px;
   text-transform: uppercase;
   padding: 0 0 5px 0;
   margin: 0 0 30px 0;
@@ -78,11 +108,11 @@
 .p-home__panel__x {
   position: fixed;
   margin: 0;
-  top: 10px;
+  top: 12px;
   right: 26px;
 
   color: $gray-1;
-  font-size: 30px;
+  font-size: 24px;
 }
 
 .p-home__panel__x:after {
@@ -96,6 +126,10 @@
 
 .p-home__rsvp-form {
   text-align: left;
+}
+
+.p-home__rsvp__label {
+  font-size: 16px;
 }
 
 .p-home__rsvp__status {
@@ -126,8 +160,8 @@
 
 .p-home__panel__center__text {
   text-align: center;
-    width: 50%;
-    margin: 0 auto;
+  width: 50%;
+  margin: 0 auto;
   // transform: translate(50%, 0);
 }
 

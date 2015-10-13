@@ -82,14 +82,6 @@ $debugTypography: false;
    ========================================================================== */
 html {
   font-size: 100%;
-
-  @include bp(screen-md) {
-    font-size: 150%;
-  }
-
-  @include bp(screen-lg) {
-    font-size: 200%;
-  }
 }
 
 body, button {
@@ -98,11 +90,6 @@ body, button {
   line-height: $base-line-height;
   color: $base-text-color;
   font-weight: 400;
-
-  @include bp(screen-lg) {
-    @include fontSize($base-font-size-lg);
-  }
-
 }
 
 body,
@@ -129,57 +116,46 @@ h6, .h6 {
 }
 
 h1, .h1 {
-  @include fontSize(36px);
+  @include fontSize(40px);
 }
 
 h2, .h2 {
-  @include fontSize(26px);
+  @include fontSize(36px);
 }
 
 h3, .h3 {
-  @include fontSize(22px);
+  @include fontSize(30px);
 }
 
 h4, .h4 {
-  @include fontSize(15px);
+  @include fontSize(26px);
 }
 
 h5, .h5 {
-  @include fontSize(12px);
+  @include fontSize(22px);
 }
 
 h6, .h6 {
-  @include fontSize(11px);
-  // @include bp(screen-lg) {
-  //   @include fontSize(10px);
-  // }
+  @include fontSize(18px);
 }
 
 .h7 {
-  @include fontSize(9px);
+  @include fontSize(14px);
 
 }
 
 .h8 {
-  @include fontSize(8px);
+  @include fontSize(12px);
 
 }
 
 
 .type-sm {
   @include fontSize(12px);
-
-  @include bp(screen-lg) {
-    @include fontSize(7px);
-  }
 }
 
 .type-xsm {
   @include fontSize(11px);
-
-  @include bp(screen-lg) {
-    @include fontSize(7px);
-  }
 }
 
 

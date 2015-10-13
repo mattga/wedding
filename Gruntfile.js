@@ -5,15 +5,6 @@ module.exports = function(grunt) {
 
     pkg: grunt.file.readJSON('package.json'),
 
-    // Styleguide Generation tool
-    hologram: {
-      generate: {
-        options: {
-          config: 'hologram_config.yml'
-        }
-      }
-    },
-
     // CSS Preprocessor
     sass: { // Task
       dist: { // Target
@@ -28,11 +19,10 @@ module.exports = function(grunt) {
       }
     },
 
-
     uncss: {
       dist: {
         files: {
-          'css/tidy.css': ['_site/index.html']
+          'css/tidy.css': ['./index.html']
         }
       }
     },
@@ -100,16 +90,6 @@ module.exports = function(grunt) {
       }
     },
 
-    // Enable the use of command line
-    shell : {
-      jekyllBuild : {
-        command : 'jekyll build'
-      },
-      jekyllServe : {
-        command : 'jekyll serve'
-      }
-    },
-
     // Actively listening to changes
     watch: {
       options: {
@@ -122,55 +102,26 @@ module.exports = function(grunt) {
                 'js/components/*.js',
                 'js/pages/*.js'],
 
-        tasks: ['newer:concat', 'newer:uglify', 'newer:jshint', 'shell:jekyllBuild'],
+        tasks: ['newer:concat', 'newer:uglify', 'newer:jshint'],
         options: {
           spawn: false,
         }
       },
       css: {
         files: ['scss/*.scss','scss/*/*.scss','scss/**/*.scss','css/build/global.css'],
-        tasks: ['sass', 'newer:autoprefixer', 'newer:cssmin', 'shell:jekyllBuild'],
+        tasks: ['sass', 'newer:autoprefixer', 'newer:cssmin'],
         options: {
           spawn: false,
         }
       },
-      // hologram: {
-      //   files: [
-      //   'hologram_config.yml',
-      //   'scss/*/*.scss',
-      //   'scss/*/*/*.scss',
-      //   'doc_assets/*'
-      //   ],
-      //   tasks: ["hologram"]
-      // },
-      // images: {
-      //   files: ['images/**/*.{png,jpg,gif}', 'images/*.{png,jpg,gif}'],
-      //   tasks: ['newer:imagemin','shell:jekyllBuild'],
-      //   options: {
-      //     spawn: false,
-      //   }
-      // },
-      html: {
-        files: ['_includes/*.html', '_layouts/*.html','_posts/*.html','_components/*.html','*.html'],
-        tasks:['shell:jekyllBuild'],
-        options:{
-          spawn: false
-        }
-      },
-      markdown: {
-        files: ['*.md','_project/*.md','_posts/*.md'],
-        tasks:['shell:jekyllBuild'],
-        options:{
-          spawn: false
-        }
-      }
+
     },
 
     connect: {
       server: {
         options: {
           port: 8000,
-          base: './_site'
+          base: './'
         }
       }
     },
@@ -184,7 +135,7 @@ module.exports = function(grunt) {
   require('time-grunt')(grunt);
 
   // Default Task is basically a rebuild
-  grunt.registerTask('default', ['concat', 'uglify', 'sass', 'imagemin','shell:jekyllBuild']);
+  grunt.registerTask('default', ['concat', 'uglify', 'sass', 'imagemin']);//,'shell:jekyllBuild']);
 
   grunt.registerTask('dev', ['connect', 'watch']);
 };

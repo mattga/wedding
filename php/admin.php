@@ -1,7 +1,7 @@
 <?php 
 // $connection = new MongoClient(); // localhost:27017
 $connection = new MongoClient('mongodb://heroku_flt2tbwz:22q6vl8p643tclvjoc0klnb6g8@ds035844.mongolab.com:35844/heroku_flt2tbwz'); // Heroku MongoDB
-$db = $connection->heroku_tp7mzb83;
+$db = $connection->heroku_flt2tbwz;
 $rsvps = $db->rsvp;
 $emails = $db->invite_emails;
 
